@@ -262,3 +262,26 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+
+
+doc_events = {
+    "Communication": {
+        "after_insert": "erpnext_update.api.communication_after_insert"
+    }
+}
+
+
+
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["name", "in", [
+                "CRM Lead-custom_lead_type",
+                "CRM Lead-custom_candidate_category",
+                "CRM Lead-custom_urgency_level"
+            ]]
+        ]
+    }
+]
