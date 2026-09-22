@@ -1664,7 +1664,8 @@ def extract_lead_from_communication(communication_name):
 
         response = client.responses.create(
 
-            model="gpt-5.6-luna",
+           #model="gpt-5.6-luna",
+           model="gpt-4",
 
             instructions="""
 Extract customer information from the email.
@@ -2134,7 +2135,8 @@ def create_lead_from_communication(communication_name):
 
         response = client.responses.create(
 
-            model="gpt-5.6-luna",
+            #model="gpt-5.6-luna",
+            model="gpt-4",
 
             instructions="""
 Extract customer information and classify the email based on the email subject and body.
